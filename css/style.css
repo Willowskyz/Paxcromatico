@@ -1,0 +1,430 @@
+
+/* Defino variables */
+:root {
+    --fondo: rgba(188,175,156,0.3);
+    --blanco: #ffffff  ;
+
+    --texto: #61615d;
+    --secundario:#bbbbaf;
+    --boton:#FFFFFF;
+    --boton2: rgba(188,175,156);
+
+    --fuentePrincipal: 'Covered By Your Grace', cursive;
+    --fuenteSecundaria: 'Josefin Sans', sans-serif;
+}
+
+/* Paul irish border box para configuracion */
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;       /* Para los rems */
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/* Globales */
+
+body {
+    background-image: linear-gradient(to top, var(--blanco) 30%, var(--fondo) 100% );
+    background-repeat: no-repeat;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    
+}
+
+a{
+    text-decoration: none;
+    color: var(--secundario);
+}
+
+img {
+    width: 100%;
+}
+
+.contenedor {
+ /*    max-width: 120rem;
+    margin: 0 auto; /* Con esto centro el contenido */ 
+
+    width: min(90%, 120rem); /* Equivale lo mismo al max width y min */
+    margin: 0 auto;
+}
+
+
+h1 {
+    font-size: 5rem;
+    text-align: center;
+    color: var(--texto);
+    font-family: var(--fuentePrincipal);
+}
+
+h2 {
+    font-size: 2.4 rem;
+    text-align: center;
+    color: var(--secundario);
+    font-family: var(--fuenteSecundaria);
+    font-weight: normal;
+
+}
+
+p {
+    font-size: 1.6rem;
+    color: var(--secundario);
+    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--fuenteSecundaria);
+}
+
+.no-margin {
+    margin: 0;
+}
+
+.centrar-texto {
+    text-align: center;
+}
+
+/* Header */
+
+@media (min-width: 768px) {
+    .barra {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         
+    }
+     
+}
+
+
+@media (min-width: 768px) {
+    .navegacionRedes {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin: -8rem 0 0 0;
+        padding: 0 0 0 80rem;
+        gap: 1rem;
+    }
+}
+
+.navegacionRedes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+
+
+/* Separador */
+
+hr {
+    border: 0.1rem solid #b19b7a
+}
+
+/* footer */
+
+.foot {
+    text-align: center;
+    font-family: var(--fuenteSecundaria);
+    color:var(--texto);
+    font-size: 1.5rem;
+
+}
+
+
+/* Navegacion */
+@media (min-width: 768px) {
+    .contenedor2 {
+        width: 70rem;
+    }
+}
+
+
+
+
+.navegacion-principal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    
+}
+
+@media (min-width: 768px) {
+    .navegacion-principal {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        padding: 1rem;
+        
+        
+    }
+}
+
+
+
+.navegacion__botonera {
+    font-size: 2rem;
+    font-family: var(--fuenteSecundaria);
+    color: var(--texto);
+    
+}
+
+.navegacion__botonera--activa,
+.navegacion__botonera:hover {
+    color: #000;
+
+}
+
+/* portada */
+
+.portada {
+    display: grid;
+    
+}
+
+.parrafo {
+    display: flex;
+    justify-content: center;
+    width: auto;
+    margin: 0 1rem;
+}
+
+@media (min-width: 768px) {
+    .parrafo {
+        display: flex;
+        justify-content: center;
+        width: 90rem;
+        margin:auto;
+    }
+}
+
+
+
+
+.botonera {
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.boton {
+    background-color:var(--boton2);
+    color: var(--blanco);
+    padding: 0.5rem 7rem;
+    margin-top: 1rem;
+    font-family: var(--fuenteSecundaria);
+    font-size: 1.4rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: normal;
+    border-radius: 0.5rem;
+    width: 90%;
+    text-align: center;
+    border: none;
+}
+
+
+
+.boton:hover {
+    background-color: var(--texto);
+    transition-delay: 0.1s;
+
+}
+
+@media (min-width: 768px) {
+    .boton {
+        width: auto;
+    }
+}
+
+
+.contenedorImagenes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin:5rem auto;
+    gap: 2rem;
+    height: 75%;
+    width: 75%;
+    object-fit: contain;
+}
+
+.contenedorImagenes img:last-child {
+    grid-column: 1/3;
+}
+
+/* Sobre Mi */
+
+.cover {
+    display: flex;
+    height: 35rem;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 1.5rem 0;
+
+}
+
+.navegacion {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem;
+}
+
+
+
+@media (min-width: 768px) {
+     .navegacion{
+         flex-direction: row;
+     }
+}
+
+
+/* Configuro el span y se borra con el mq */
+.barrita {
+    font-size: 0rem;
+  
+}
+
+  @media (min-width: 768px) {
+    .barrita {
+        font-size: 2.4rem;
+      
+      }
+  }
+
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin: 0 10rem;
+
+}
+
+
+.video100    {
+    width: 100%;
+}
+
+/* Brand */
+.gridImg{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    margin:auto;
+    gap: 2rem;
+    height: 75%;
+    width: 75%;
+    object-fit: contain;
+}
+
+/* Sobre Mi */
+
+@media (min-width: 768px) {
+     .dos-columnas {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         gap: 2rem;
+         margin: 2rem;
+        
+ 
+     }
+}
+
+.sobremiImagen {
+    border-radius: 50%;
+    padding: 0 10rem;
+    max-width: 100%;
+    
+}
+
+.sobremiTextos {
+    margin: auto;
+    text-align: center;
+}
+
+
+/* Contacto */
+
+.formulario {
+    display: block;
+    justify-content: center;
+    width: 100%;
+    margin: auto;
+}
+.campo {
+    display: flex;
+    margin-bottom: 2rem;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+}
+
+@media (min-width: 768px) {
+    .campo {
+        display: flex;
+        margin-bottom: 2rem;
+        align-items: center;
+        justify-content: center;
+        width: 45%;      
+}
+}
+
+.campo__label {
+    flex: 0 0 0rem;
+    text-align: right;
+    font-family: var(--fuentePrincipal);
+    font-weight: bolder;
+    
+}
+
+.campo__field {
+    flex: 1;
+    border: 1px solid #000;
+    border-radius: 0.2rem;
+    height: 3rem;
+    font-family: var(--fuenteSecundaria);
+    color: var(--texto);
+    background-color: var(--blanco);
+    
+}
+
+.campo__field--textarea {
+    height: 20rem;
+}
+
+.divContactate{
+    justify-content: center;
+}
+
+
+
+.boton2 {
+    background-color:var(--secundario);
+    color: var(--blanco);
+    padding: 0.5rem 7rem;
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    font-family: var(--fuenteSecundaria);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: normal;
+    border-radius: 0.5rem;
+    width: auto;
+    text-align: center;
+    border: none;
+}
+
+@media (min-width: 768px) {
+    .boton2 {
+        width: 100%;
+  }
+}
+
+.boton2:hover {
+    background-color: var(--texto);
+    transition-delay: 0.1s;
+    cursor: pointer;
+}
+
